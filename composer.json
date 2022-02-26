@@ -1,0 +1,15 @@
+{
+    "name": "nathanwallis/subscribe",
+    "description": "Searchs graph for path meeting latency requirements",
+    "type": "project",
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "spatie/phpunit-watcher": "^1.23"
+    },
+    "authors": [
+        {
+            "name": "Nathan Wallis",
+            "email": "natewallis@gmail.com"
+        }
+    ]
+}
