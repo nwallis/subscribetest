@@ -11,3 +11,11 @@ php graph_search.php <START_NODE> <END_NODE> <MAX_LATENCY>
 E.g.
 
 php graph_search.php A F 1000
+
+# Installation
+
+Download composer and run `composer install`
+
+# Testing
+
+Run `./vendor/bin/phpunit tests`
