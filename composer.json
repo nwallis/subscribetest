@@ -11,5 +11,10 @@
             "name": "Nathan Wallis",
             "email": "natewallis@gmail.com"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "Traverse\\": "src/Traverse/"
+        }
+    }
 }
