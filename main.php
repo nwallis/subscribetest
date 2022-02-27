@@ -28,9 +28,7 @@ try{
 //repeatedly prompt user for inptu
 while(true){
 
-    $input = trim(readline("Enter search path:"));
-    $trimmed_input = trim($input);
-    $capitalised_input = strtoupper($trimmed_input);
+    $input = strtoupper(trim(readline("Enter search path:")));
 
     if ($input == "QUIT"){
         exit;
