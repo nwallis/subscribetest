@@ -2,7 +2,7 @@
 
 This program will help you determine if there is a path between two nodes that is less than the specified maximum latency. 
 
-Graph nodes and the latency between each node is stored in the accompanying CSV file, please edit accordingly.  A demonstration node structure has already been defined in the file. 
+Graph nodes and the latency between each node is stored in the accompanying CSV file, please edit accordingly.  A demonstration graph structure has already been defined in the file `nodes.csv`.
 
 Run program:
 
