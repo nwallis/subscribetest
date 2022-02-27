@@ -6,7 +6,7 @@ Graph nodes and the latency between each node is stored in the accompanying CSV 
 
 Run program:
 
-`php main.php`
+`php main.php nodes.csv`
 
 Usage:
 
