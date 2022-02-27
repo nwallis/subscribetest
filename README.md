@@ -16,7 +16,7 @@ When prompted, enter a command in the following format
 
 E.g.
 
-A F 1200
+`A F 1200`
 
 This will search the data for a connection between A and F with a latency less than or equal to 1200ms
 
@@ -30,4 +30,4 @@ Run `./vendor/bin/phpunit tests`
 
 # Assumptions
 
-All node names are a single captial letter
+All node names are a single capital letter
