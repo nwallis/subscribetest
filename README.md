@@ -19,3 +19,7 @@ Download composer and run `composer install`
 # Testing
 
 Run `./vendor/bin/phpunit tests`
+
+# Assumptions
+
+All node names are a single captial letter
