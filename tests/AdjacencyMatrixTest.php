@@ -44,11 +44,19 @@ final class AdjacencyMatrixTest extends TestCase {
         $matrix->add_weighted_edge('A', 'B', 10);
         $matrix->add_weighted_edge('A', 'C', 20);
         $matrix->add_weighted_edge('B', 'D', 100);
-        $matrix->add_weighted_edge('C', 'D', 100);
+        $matrix->add_weighted_edge('C', 'D', 30);
         $matrix->add_weighted_edge('D', 'E', 10);
         $matrix->add_weighted_edge('E', 'F', 1000);
-        [$path_found, $latency_accumulator, $visited_accumulator] = $matrix->find_acceptable_path('A','F',1200);
-        $this->assertEquals($path_found, true);
+        [,$latency, $path] = $matrix->find_fast_enough_path('A','F',1200);
+        $this->assertEquals(empty($path), false);
+    }
+
+    public function test_invalid_path_search():void{
+        $matrix = new AdjacencyMatrix();
+        $matrix->add_weighted_edge('A', 'B', 10);
+        $matrix->add_weighted_edge('Y', 'Z', 10);
+        [,$latency, $path] = $matrix->find_fast_enough_path('A','Z',1200);
+        $this->assertEquals(empty($path), true);
     }
 
 }
