@@ -45,8 +45,8 @@ class AdjacencyMatrix{
 
         foreach($unvisited_nodes as $adjacent_node){
             $latency[] = $this->get_edge_weight($from,$adjacent_node);
-            [$visited_b, $latency_b, $path_b] = $this->find_fast_enough_path($adjacent_node, $to, $max_latency, $visited, $latency, $path);
-            if (!empty($latency_b) && !empty($path_b)) return [$visited_b, $latency_b, $path_b];
+            [$visited_current, $latency_current, $path_current] = $this->find_fast_enough_path($adjacent_node, $to, $max_latency, $visited, $latency, $path);
+            if (!empty($latency_current) && !empty($path_current)) return [$visited_current, $latency_current, $path_current];
             array_pop($latency);
         }
 
