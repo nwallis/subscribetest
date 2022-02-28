@@ -31,19 +31,17 @@ class AdjacencyMatrix{
 
         $visited[] = $from;
         $path[] = $from;
-        
-        if (array_sum($latency) > $max_latency) return [$visited, [], []];
-
+        $unvisited_nodes = $this->get_unvisited_nodes($from, $visited);
+       
+        //reached destination in valid time
         if ($from === $to) {
             if (array_sum($latency) <= $max_latency){
                 return [$visited, $latency, $path];
-            }else{
-                return [$visited, [], []];
             }
         }
 
-        $unvisited_nodes = $this->get_unvisited_nodes($from, $visited);
-        if (empty($unvisited_nodes)) return [$visited, [], []];
+        //taken too long OR we are out of nodes to visit
+        if (array_sum($latency) > $max_latency || empty($unvisited_nodes)) return [$visited, [], []];
 
         foreach($unvisited_nodes as $adjacent_node){
             $latency[] = $this->get_edge_weight($from,$adjacent_node);
